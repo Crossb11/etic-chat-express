@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETIC Chat Express</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      padding: 40px 20px;
+    }
+    .logo {
+      width: 130px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: #e31919;
+      color: #fff;
+      padding: 16px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      background: #ff4b4b;
+    }
+    .services {
+      margin-top: 40px;
+    }
+    .services h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+    .tag {
+      border: 1px solid #666;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 13px;
+      color: #777;
+    }
+    .modal-bg {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(3px);
+      justify-content: center;
+      align-items: center;
+      z-index: 9900;
+    }
+    .modal-content {
+      width: 90%;
+      max-width: 450px;
+      height: 80%;
+      background: #111;
+      border-radius: 16px;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #222;
+      z-index: 9999;
+    }
+    .modal-header {
+      padding: 12px 14px;
+      background: #e31919;
+      color: white;
+      font-weight: bold;
+      text-align: left;
+    }
+    .close-btn {
+      float: right;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    iframe {
+      flex: 1;
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="https://etic-exp.fr/wp-content/uploads/2024/03/logo-etic-1024x458.png" class="logo" alt="Logo ETIC">
+
+    <h1>ETIC Chat Express</h1>
+    <h2>Assistance & Devis instantanés 24h/24</h2>
+
+    <a class="btn" onclick="openModal()">Parler à ETIC Advisor</a>
+
+    <div class="services">
+      <h3>Diagnostic automatique :</h3>
+      <div class="services-list">
+        <div class="tag">DPE</div>
+        <div class="tag">Audit énergétique</div>
+        <div class="tag">Électricité</div>
+        <div class="tag">Gaz</div>
+        <div class="tag">Amiante</div>
+        <div class="tag">Plomb</div>
+        <div class="tag">Carrez</div>
+        <div class="tag">Copropriété</div>
+        <div class="tag">DTG / Dossier complet</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 ETIC EXP – Assistance technique & diagnostic immobilier
+  </footer>
+
+  <!-- MODALE -->
+  <div class="modal-bg" id="modalBg">
+    <div class="modal-content">
+      <div class="modal-header">
+        ETIC Advisor
+        <span class="close-btn" onclick="closeModal()">×</span>
+      </div>
+      <iframe src="https://chatgpt.com/g/g-6910b929d324819189eff9d708bc3df7-etic-whatsapp-advisor-assistance-client-devis?ref=mini"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("modalBg").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modalBg").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
